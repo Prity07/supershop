@@ -1,23 +1,19 @@
 package com.company.shopno;
 
-public class Manager {
-    private Integer id;
-    private String managerName;
-    private int salary;
+public class Manager extends Employee{
 
-    public Manager(int id, String managerName, int salary){
-        this.id = id;
-        this.managerName = managerName;
-        this.salary= salary;
+    private String positionName;
+
+    public Manager(double salary, Branch branch, int id, String name,
+                   String dob, String gender, String bloodGroup, String phoneNumber, String city) {
+        super(salary, branch, id, name, dob, gender, bloodGroup, phoneNumber, city);
     }
 
-    public int getId() {
-        return id;
+    public void setPositionName(String positionName) {
+        this.positionName = positionName;
     }
-    public String getManagerName() {
-        return managerName;
-    }
-    public int getSalary() {
-        return salary;
+
+    public String getPositionName() {
+        return positionName;
     }
 }
