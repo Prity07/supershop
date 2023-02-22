@@ -84,8 +84,11 @@ public class ShawpnoCounter {
                 "01910775655",
                 "Dhaka");
 
+        IDiscount discount = new Discount(12);
+//        SpecialDiscount specialDiscount = new SpecialDiscount(200);
 
         Customer customer1 = new Customer(3001,"Prity","08/12/2001",branch1);
+        LoyalCustomer loyalCustomer = new LoyalCustomer(3001,"Maruf","08/12/2001",branch1);
 
         Basket basket1 = new Basket(2001,customer1);
         basket1.addProduct(product1);
@@ -96,7 +99,15 @@ public class ShawpnoCounter {
         System.out.println("Customer name: " + basket1.getCustomer().getName());
         System.out.println("Branch name: " + basket1.getCustomer().getBranch().getBranchName());
         System.out.println("Number of products: " + basket1.getNumberOfProduct());
-        System.out.println("Total Bill: " + basket1.calculateBill() + " BDT");
+        double totalBill =  basket1.calculateBill();
+        System.out.println("Total Bill: " + totalBill + " BDT");
+
+        double discountAmount = discount.calculateRegularDiscount();
+        System.out.println("Discount: " + discountAmount + " BDT");
+
+        double payableAmount = totalBill - discountAmount;
+        System.out.println("You have to pay: " + payableAmount + " BDT");
+
         System.out.println("Your Product List: ");
         basket1.showProducts();
 
