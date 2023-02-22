@@ -84,8 +84,8 @@ public class ShawpnoCounter {
                 "01910775655",
                 "Dhaka");
 
-        IDiscount discount = new Discount(12);
-//        SpecialDiscount specialDiscount = new SpecialDiscount(200);
+//        IDiscount discount = new Discount(12);
+        SpecialDiscount specialDiscount = new SpecialDiscount(200);
 
         Customer customer1 = new Customer(3001,"Prity","08/12/2001",branch1);
         LoyalCustomer loyalCustomer = new LoyalCustomer(3001,"Maruf","08/12/2001",branch1);
@@ -102,7 +102,7 @@ public class ShawpnoCounter {
         double totalBill =  basket1.calculateBill();
         System.out.println("Total Bill: " + totalBill + " BDT");
 
-        double discountAmount = discount.calculateRegularDiscount();
+        double discountAmount = specialDiscount.calculateDiscount(loyalCustomer);
         System.out.println("Discount: " + discountAmount + " BDT");
 
         double payableAmount = totalBill - discountAmount;
