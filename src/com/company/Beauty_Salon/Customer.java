@@ -2,10 +2,10 @@ package com.company.Beauty_Salon;
 
 public class Customer {
     private String name;
-    private boolean member = false;
+    private boolean isMember = false;
     private String memberType;
 
-    public Customer(String name){
+    public Customer(String name) {
         this.name = name;
     }
 
@@ -14,18 +14,11 @@ public class Customer {
     }
 
     public boolean isMember() {
-        if(member== true){
-            this.member = member;
-            return true;
-        }
-           else {
-               return false;
-        }
-
+        return this.isMember;
     }
 
-    public void setMember(boolean member) {
-        this.member = member;
+    public void setMember(boolean isMember) {
+        this.isMember = isMember;
     }
 
     public String getMemberType() {
@@ -33,18 +26,17 @@ public class Customer {
     }
 
     public void setMemberType(String memberType) {
-        if(memberType == "Gold Member"){
-            this.memberType = memberType;
-            System.out.println("Gold Membership");
-        }
-        else if(memberType == "Premium Member"){
-            this.memberType = memberType;
-            System.out.println("Premium Membership");
-        }
-        else if(memberType == "Silver Member"){
-            this.memberType = memberType;
-            System.out.println("Silver Membership");
-        }
+        this.memberType = memberType;
+//        if (memberType == "Gold Member") {
+//            this.memberType = memberType;
+//            System.out.println("Gold Membership");
+//        } else if (memberType == "Premium Member") {
+//            this.memberType = memberType;
+//            System.out.println("Premium Membership");
+//        } else if (memberType == "Silver Member") {
+//            this.memberType = memberType;
+//            System.out.println("Silver Membership");
+//        }
 
     }
 }

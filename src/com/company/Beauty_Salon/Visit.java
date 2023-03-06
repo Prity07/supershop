@@ -8,18 +8,20 @@ public class Visit {
     private double serviceExpense;
     private double productExpense;
 
-    public Visit(String name, Date date, Customer customer){
+    public Visit(Customer customer, Date date){
         this.date = date;
-        this.customer = new Customer(name);
+        this.customer = customer;
     }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
     public String getName(){
         return this.customer.getName();
     }
 
     public double getProductExpense() {
-        if(customer.isMember()){
-
-        }
         return productExpense;
     }
 
@@ -35,7 +37,17 @@ public class Visit {
         this.serviceExpense = serviceExpense;
     }
     public double getTotalExpense(){
-        double totalExpense = getServiceExpense()+getProductExpense();
+        double totalExpense = this.productExpense + this.serviceExpense;
         return totalExpense;
+    }
+
+    @Override
+    public String toString() {
+        return "Visit{" +
+                "customer=" + customer +
+                ", date=" + date +
+                ", serviceExpense=" + serviceExpense +
+                ", productExpense=" + productExpense +
+                '}';
     }
 }
