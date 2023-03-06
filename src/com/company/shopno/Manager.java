@@ -10,10 +10,12 @@ public class Manager extends Employee{
     }
 
     public void setPositionName(String positionName) {
+
         this.positionName = positionName;
     }
 
     public String getPositionName() {
+
         return positionName;
     }
 }

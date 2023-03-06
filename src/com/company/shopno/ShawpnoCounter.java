@@ -84,7 +84,7 @@ public class ShawpnoCounter {
                 "01910775655",
                 "Dhaka");
 
-//        IDiscount discount = new Discount(12);
+        IDiscount discount = new Discount(12);
         SpecialDiscount specialDiscount = new SpecialDiscount(200);
 
         Customer customer1 = new Customer(3001,"Prity","08/12/2001",branch1);
@@ -96,6 +96,7 @@ public class ShawpnoCounter {
         basket1.addProduct(product5);
         basket1.addProduct(product3);
         basket1.addProduct(product4);
+
         System.out.println("Customer name: " + basket1.getCustomer().getName());
         System.out.println("Branch name: " + basket1.getCustomer().getBranch().getBranchName());
         System.out.println("Number of products: " + basket1.getNumberOfProduct());

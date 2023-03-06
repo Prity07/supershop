@@ -1,12 +1,12 @@
 package com.company.meena_Bazar;
 
-public class Ingredient {
+public class Product {
     private int id;
     private String name;
     private String size;
     private double price;
 
-    public Ingredient(int id, String name, String size, double price){
+    public Product(int id, String name, String size, double price){
         this.id = id;
         this.name = name;
         this.size = size;

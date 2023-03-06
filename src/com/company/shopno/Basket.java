@@ -19,10 +19,12 @@ public class Basket {
     }
 
     public int getNumberOfProduct() {
+
         return this.products.size();
     }
 
     public ArrayList<Product> getProducts() {
+
         return this.products;
     }
 
@@ -40,12 +42,12 @@ public class Basket {
     }
 
     public void showProducts(){
-        for (Product product : this.products) {
+        for (Product myproduct : this.products) {
             System.out.println("-----------------------------------");
-            System.out.println("Product ID: " + product.getId());
-            System.out.println("Product name: " + product.getProductName());
-            System.out.println("Product price: " + product.getPrice() + " BDT");
-            System.out.println("Product size: " + product.getSize());
+            System.out.println("Product ID: " + myproduct.getId());
+            System.out.println("Product name: " + myproduct.getProductName());
+            System.out.println("Product price: " + myproduct.getPrice() + " BDT");
+            System.out.println("Product size: " + myproduct.getSize());
         }
     }
 }

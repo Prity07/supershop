@@ -9,6 +9,7 @@ public class LoyalCustomer extends Customer{
     }
 
     public void increaseRewardPoint(int point){
+
         this.rewardPoint = this.rewardPoint + point;
     }
 
